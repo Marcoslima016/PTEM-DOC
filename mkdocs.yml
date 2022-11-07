@@ -1,0 +1,77 @@
+site_name: Documentação Ponto eletrônico Compliance
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  # - pymdownx.tabbed
+  # - attr_list
+  - pymdownx.snippets
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css      
+
+
+nav:
+
+  ########################################
+  # NOTES NAV
+ 
+  ########################################
+
+  - Inicio - Visão Geral: index.md
+  # - Projeto PTEM (Core): 
+  #   - Introdução: ptem/intro.md
+  # - Projeto PTEM_2.0 (Refatorado): 
+  #   - Introdução: ptem2/intro.md
+  - Ponto Virtual: 
+    - Introdução: ponto_virtual/intro.md
+    - Ponto Pessoal: ponto_virtual/ponto_pessoal.md 
+    - Ponto Totem: ponto_virtual/ponto_totem.md 
+  - Processos: 
+    - Inicialização do app: processos/batidas_dia.md
+    - Batidas do dia: processos/batidas_dia.md
+    #------------------------
+    # NOTES REGISTRAR PONTO
+    # - Ter topico descrevendo batidas off
+    # - Descrever paginas presentes no fluxo 
+    # - Descrever chamada de usecases de conforme ocorre execucao do processo 
+    - Registrar Ponto: processos/registrar_ponto.md
+    #------------------------
+    - Sincronização de batida: processos/sinc.md 
+  
+
+theme:
+  name: material
+  # custom_dir: mkdocs-material/material
+  # custom_dir: mkdocs-material-7.3.6/material
+  custom_dir: mkdocs-material-8.2.9/material
+
+  palette:
+    # primary: brown
+    primary: blue
+
+  features:
+    - content.code.annotate
+  # features:
+  #   - navigation.expand
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Necessary for search to work properly
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
