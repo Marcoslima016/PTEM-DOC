@@ -25,19 +25,22 @@ Trabalhar direto no código ja existente não se mostrou produtivo, devido a alg
  Nessa revisão, a regra de negócios do app seria elaborada do zero, melhorando aspectos como tipagem, implementação de design patterns, organização do código, etc. <br/>
  Mas o tempo era uma preocupação, então o projeto não poderia parar e aguardar ser refeito totalmente do zero. Por conta disso, foi decicido ir refazendo o aplicativo por partes, de forma que algumas funcionalidedades/telas continuariam sendo da versão anterior, enquanto outros recursos seriam feitos do zero. Para fazer isso na prática, o aplicativo foi quebrado em dois projetos Flutter, um deles sendo o projeto ja existente, e o outro onde seriam desenvolvidas as telas/funcionalidades do zero, da seguinte forma: <br/> 
 
-#### PTEM - CORE 
+#### Projeto PTEM (CORE) 
 
 Projeto que ja existia, onde foram realizadas as configurações nativa de compilação. Esse projeto é o "core", ou seja, é ele que é compilado, de forma que o outro projeto é importado dentro desse projeto principal.   <br/> 
 Em termos de funcionalidades, recursos e telas, esse projeto tem no momento os seguintes elementos: <br/> 
-- Inicialização do Aplicativo: Toda a lógica responsável por inicializar o app, ou seja, definir rota inicial (verificando se esta autenticado), recuperar alguns dados persistidos localmente, etc. <br/>
-- Login/Cadastro: Telas de login e cadastro. <br/>
-- Telas secundárias (telas de relatórios, por ex: batidas por data, etc) <br/>
+**- Inicialização do Aplicativo:** Toda a lógica responsável por inicializar o app, ou seja, definir rota inicial (verificando se esta autenticado), recuperar alguns dados persistidos localmente, etc. <br/>
+**- Login/Cadastro:** Telas de login e cadastro, e as respectivas regras de negócio. <br/>
+**- Telas secundárias (telas de relatórios, por ex: batidas por data, etc)** <br/>
+**- Drawer (menu lateral)** 
 
-#### PTEM 2.0 
+#### Projeto PTEM 2.0 
 
-   **PTEM 2.0 - ** Projeto onde estão sendo desenvolvidos os recursos do zero, visando melhoria. Esse projeto é importado dentro do PTEM, como se fosse um package. 
-    Em termos de funcionalidades, recursos e telas, esse projeto tem no momento os seguintes elementos: <br/> 
-
+Projeto onde estão sendo desenvolvidos os recursos do zero, visando melhorias. Esse projeto é importado dentro do PTEM, como se fosse um package. 
+Em termos de funcionalidades, recursos e telas, esse projeto tem no momento os seguintes elementos: <br/> 
+**- Tela Home:** Tela inicial, quando autenticado. Essa tela é composta do menu BottomNavigationBar, servindo como uma espécie de "casca" onde serão exibidas as telas em si. <br/>
+**- Tela Dashboard:** Tela que é carregada dentro da tela home após inicializar o app, é composta dos dados do usuário (nome, etc), além das informações referente a horas (horas trabalhadas, em banco, etc). <br/>
+**- Tela Batidas do dia:**  Tela onde são listadas as batidas do dia. (exibida ao clicar no botão da esquerda do bottom bar)  <br/>
 
 
 

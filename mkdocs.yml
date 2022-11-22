@@ -23,6 +23,8 @@ nav:
   ########################################
 
   - Inicio - Visão Geral: index.md
+  # - Arquitetura do projeto / Organização do projeto: arquitetura_geral/arquitetura_geral.md
+  - Projeto PTEM 2.0: ptem2/ptem2.md
   # - Projeto PTEM (Core): 
   #   - Introdução: ptem/intro.md
   # - Projeto PTEM_2.0 (Refatorado): 
